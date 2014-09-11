@@ -14,19 +14,19 @@ case "$1" in
     start)
     echo -n "Starting Tweet-A-Bit: "
     start-stop-daemon --start --exec $DAEMON
-    echo "noip2."
+    echo "tweet-a-bit."
     ;;
     stop)
     echo -n "Shutting Tweet-A-Bit:"
     start-stop-daemon --stop --oknodo --retry 30 --exec $DAEMON
-    echo "noip2."
+    echo "tweet-a-bit."
     ;;
 
     restart)
     echo -n "Restarting Tweet-A-Bit: "
     start-stop-daemon --stop --oknodo --retry 30 --exec $DAEMON
     start-stop-daemon --start --exec $DAEMON
-    echo "noip2."
+    echo "tweet-a-bit."
     ;;
 
     *)
